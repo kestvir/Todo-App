@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+
+    <title>Todo App MVC</title>
+</head>
+
+
+<body>
+    <div class="container list-center">
+        <div class="row">
+            <div style="height: 510px;" class="col s12">
+                <div class="card card-center">
+                    <div class="card-content">
+                        <span class="card-title">Todo List</span>
+                        <div class="row">
+                            <form class="add">
+                                <label class="add__checkbox-label">
+                                    <input type="checkbox" class="add__toggle-all">
+                                    <span>&nbsp;</span>
+                                </label>
+                                <div class="input-field col s12">
+                                    <input type="text" name="todo" id="todo" class="add__todo">
+                                    <label for="task">New Todo</label>
+                                </div>
+                                <button class="btn add__btn">Add a todo</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="todos card-action">
+                        <div class="todos__content">
+                            <h5 class="todos__title">Todos:</h5>
+                            <ul class="todos__list collection"></ul>
+                            <div class="todos__options">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input type="text" name="filter" id="filter" class="todos__filter-field">
+                                        <label for="filter">Filter todos</label>
+                                    </div>
+                                    <div class="todo__btns col s12">
+                                        <p class="todos__todos-left"></p>
+                                        <button class="btn todos__all btn--filter-all">All</button>
+                                        <button class="btn todos__completed btn--filter-completed">Completed</button>
+                                        <button class="btn todos__active btn--filter-active">Active</button>
+                                        <button
+                                            class="btn right black todos__delete-completed btn--delete-completed">Clear
+                                            completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+
+</html>
