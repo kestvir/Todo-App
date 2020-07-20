@@ -229,7 +229,7 @@ const loadEventListeners = () => {
 
     DOMels.todosSearchField.addEventListener('keyup', searchTodos);
 
-    DOMels.todosList.addEventListener('dblclick', addEditTodo);
+    DOMels.todosList.addEventListener('click', addEditTodo);
 
     DOMels.todosList.addEventListener('blur', editTodo, true);
 

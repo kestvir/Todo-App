@@ -67,7 +67,13 @@ body {
     }
 
     &__description {
-        margin-left: 20px;  
+        cursor: pointer;
+        margin-left: 20px;
+        transition: 0.3s; 
+        
+        &:hover {
+            color: #ffab40;
+        }
     }
 }
 
